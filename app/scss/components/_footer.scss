@@ -1,0 +1,202 @@
+.footer {
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        transition: background-color .3s;
+    }
+
+
+    &__inner {
+        padding: 50px 0;
+        background-color: $white-bg;
+
+        @include r(768) {
+            padding-bottom: 10px;
+        }
+    }
+
+    &__items {
+        display: flex;
+
+        @include r(1024) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__map {}
+
+    &__item {
+        width: 100%;
+
+        &--map {
+            max-width: 45%;
+            margin-right: 5%;
+
+            @include r(1024) {
+                max-width: 100%;
+                margin-right: 0;
+            }
+        }
+
+        &--info {
+            max-width: 50%;
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include r(1024) {
+                max-width: 100%;
+                padding-left: 15px;
+            }
+        }
+    }
+
+    &__map {
+        display: block;
+    }
+
+    &__link-map {
+        display: block;
+        position: relative;
+        height: 380px;
+
+        @include r(768) {
+            height: 280px;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+
+        &::before {
+            content: "Просмотреть на карте";
+            font-size: 36px;
+            line-height: 48px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            z-index: 1;
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgba($color: #000000, $alpha: 0.5);
+        }
+
+        &:hover {
+            &::before,
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__map-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__list-item {
+        padding-left: 20px;
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: #000;
+            position: absolute;
+            left: 0;
+            top: 10px;
+            border-radius: 50%;
+        }
+    }
+
+    &__contacts {
+        font-style: normal;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    &__link {
+        display: block;
+        width: fit-content;
+        margin-bottom: 10px;
+        padding-left: 30px;
+        position: relative;
+        font-size: 20px;
+        border-bottom: 1px solid transparent;
+        transition: color .3s;
+
+        &:hover {
+            color: $blue;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &--tel {
+            &::before {
+                background-image: url(../images/phone.svg);
+            }
+        }
+
+        &--mail {
+            &::before {
+                background-image: url(../images/mail.svg);
+            }
+        }
+
+        &--address {
+            &::before {
+                background-image: url(../images/map.svg);
+            }
+        }
+    }
+
+    &__list-link {
+        display: inline-block;
+        font-size: 22px;
+        line-height: 28px;
+        border-bottom: 1px solid transparent;
+        transition: border-color .3s, color .3s;
+
+        &:hover {
+            border-color: #000;
+            color: $blue;
+        }
+    }
+}

@@ -1,0 +1,156 @@
+.questions {
+    &__inner {
+        padding: 30px 0 15px;
+        background-color: $white-bg;
+    }
+
+    &__title {
+        @include reset;
+        margin-bottom: 25px;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 48px;
+        color: #000;
+        text-align: center;
+
+        @include r(630) {
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+        @include r(500) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        @include r(380) {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        span {
+            display: block;
+            font-weight: 700;
+        }
+    }
+
+    &__form {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        @include r(500) {
+            flex-wrap: wrap;
+            margin-bottom: 0;
+        }
+    }
+
+    &__input {
+        display: block;
+        padding: 0 15px;
+        width: 48%;
+        height: 40px;
+        border: 2px solid transparent;
+        transition: border-color .4s;
+        font-size: 18px;
+        line-height: 24px;
+        color: #000;
+        background-color: rgba(#808080, .3);
+        outline: transparent;
+
+        @include r(500) {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        &::placeholder {
+            font-size: 18px;
+            line-height: 24px;
+            color: #000;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: $blue;
+        }
+
+        &--tel {
+            width: 100%;
+            margin-bottom: 30px;
+
+            @include r(500) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__textarea {
+        display: block;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+        resize: none;
+        width: 100%;
+        height: 200px;
+        background-color: rgba(#808080, .3);
+        border: 2px solid transparent;
+        transition: border-color .4s;
+        outline: transparent;
+
+        @include r(500) {
+            height: 100px;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: $blue;
+        }
+
+        &::placeholder {
+            font-size: 18px;
+            line-height: 24px;
+            color: #000;
+        }
+    }
+
+    &__btn {
+        display: block;
+        width: 190px;
+        text-align: center;
+        height: 50px;
+        border-radius: 2px;
+        margin-left: auto;
+        text-transform: uppercase;
+        cursor: pointer;
+        font-size: 24px;
+        color: #000;
+        border: 1px solid transparent;
+        background-color: rgba(#808080, .3);
+        outline: transparent;
+        transition: box-shadow .3s, background-color .3s, border-color .3s;
+
+        @include r(768) {
+            font-size: 20px;
+            height: 40px;
+        }
+
+        &:hover {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+
+        }
+
+        &:active {
+            background-color: rgba(#808080, .5);
+        }
+
+        &:focus {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+            border-color: $blue;
+        }
+    }
+}

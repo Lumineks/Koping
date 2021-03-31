@@ -1,0 +1,109 @@
+.popular {
+    &__inner {
+        padding-bottom: 100px;
+        background-color: $white-bg;
+
+        @include r(768) {
+        padding-bottom: 30px;
+        }
+    }
+
+    &__title {
+        color: #fff;
+        @include r(500) {
+        text-align: center;
+        }
+        &::after {
+            display: none;
+        }
+    }
+
+    &__top {
+        margin-bottom: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 112px;
+        background-color: #2BD5C0;
+        border: 1px solid #000000;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+
+        @include r(1200) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        max-width: 280px;
+        text-align: center;
+
+        @include r(1200) {
+            max-width: 48%;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        @include r(630) {
+        max-width: 100%;
+        }
+    }
+
+    &__image-wrapper {
+        display: block;
+        margin-bottom: 25px;
+        width: 280px;
+        height: 280px;
+
+        @include r(1200) {
+            margin: 0 auto;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    &__item-title {
+        display: block;
+        margin-bottom: 50px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+
+
+    &__link {
+        display: inline-block;
+        padding-top: 9px;
+        height: 50px;
+        min-width: 150px;
+        font-size: 18px;
+        line-height: 24px;
+        color: #fff;
+        background-color: #000;
+        border: 2px solid #0B0A0A;
+        outline: transparent;
+        transition: background-color .3s, border-color .3s, box-shadow .3s;
+
+        &:hover {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+
+        }
+
+        &:active {
+            background-color: rgba(#000, .7);
+        }
+
+        &:focus {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+        }
+    }
+}
