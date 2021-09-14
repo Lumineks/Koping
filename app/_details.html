@@ -1,0 +1,187 @@
+@@include('./parts/components/_head.html', {
+title: "Копинг - Главная"
+})
+<div class="wrapper">
+    <div class="content">
+        @@include('./parts/components/_header.html')
+
+        <main class="main">
+            <h1 class="sr-only">Подробная информация о товаре</h1>
+            <section class="details">
+                <div class="container">
+                    <h2>@@product-title</h2>
+
+                    <div class="details__content">
+                        <div class="details__box">
+                            <div class="details__slider">
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        @@for (var i = 1; i <= 7; i++) {
+                                            <div class="swiper-slide">
+                                                <img src="images/@@img-filename-`+i+`.jpg" alt="" height="400">
+
+                                            </div>
+                                          }
+                                       
+                                    </div>
+                                </div>
+
+
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        @@for (var i = 1; i <= 7; i++) {
+                                            <div class="swiper-slide">
+                                                <img src="images/@@thumb-filename-`+i+`.jpg" alt="">
+                                            </div>
+                                          }
+                                        <div class="swiper-slide">
+                                            <img src="images/koping-1.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/koping-1.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/koping-1.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/koping-1.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/koping-1.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/koping-1.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="images/koping-1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <p class="details__descr">
+                                Описание товара
+                            </p>
+                            <p class="details__pricing">
+                                Цена равна 1 погонному метру
+                            </p>
+                            <a class="details__link link-phone" href="tel:380669606041">Позвонить</a>
+                        </div>
+                        <div class="details__box">
+                            <table class="details__table">
+                                <thead class="details__thead">
+                                    <tr>
+                                        <th class="details__table-title" colspan="2">Технические характеристики</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="details__row">
+                                        <th class="details__row-title">Материал</th>
+                                        <td class="details__row-text">
+                                            @@row1
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="details__row-title">Прочность на сжатие</th>
+                                        <td class="details__row-text">
+                                            @@row2
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="details__row-title">Минимальные требования по гибкости</th>
+                                        <td class="details__row-text">
+                                            @@row3
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="details__row-title">Водопоглощение</th>
+                                        <td class="details__row-text">
+                                            @@row4
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="details__row-title">Климатические изменения: заморозки-оттепель</th>
+                                        <td class="details__row-text">
+                                            @@row5
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="details__row-title">Устойчивость к скольжению при 18&deg</th>
+                                        <td class="details__row-text">
+                                            @@row6
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="details__row-title">Геометрические размеры</th>
+                                        <td class="details__row-text">
+                                            @@row7
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="details__row-title">Визуальные характеристики</th>
+                                        <td class="details__row-text">
+                                            @@row8
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="details__row-title">Гарантия</th>
+                                        <td class="details__row-text">
+                                            @@row9
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="details__row-title">Производитель</th>
+                                        <td class="details__row-text"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Сделать фенсибокс -->
+                        <ul class="details__gallery">
+                            <li class="details__gallery-item">
+                                <img class="details__img" src="images/" alt="">
+                            </li>
+                            <li class="details__gallery-item">
+                                <img class="details__img" src="images/" alt="">
+                            </li>
+                            <li class="details__gallery-item">
+                                <img class="details__img" src="images/" alt="">
+                            </li>
+                            <li class="details__gallery-item">
+                                <img class="details__img" src="images/" alt="">
+                            </li>
+                            <li class="details__gallery-item">
+                                <img class="details__img" src="images/" alt="">
+                            </li>
+                            <li class="details__gallery-item">
+                                <img class="details__img" src="images/" alt="">
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+
+        @@include('./parts/components/_footer.html')
+    </div>
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 7,
+            watchSlidesProgress: true,
+            spaceBetween: 10,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 10,
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+    @@include('./parts/components/_bottom.html')
