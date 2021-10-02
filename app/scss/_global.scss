@@ -34,6 +34,15 @@ ul {
     margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -60,14 +69,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 1.2;
     color: #000;
 
 
 
     &.lock {
+
         .header__top::before,
         .main::before,
         .footer::before {
@@ -79,6 +90,7 @@ body {
 
 .main {
     position: relative;
+
     &::before {
         content: "";
         width: 100%;
